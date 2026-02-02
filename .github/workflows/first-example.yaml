@@ -10,7 +10,7 @@ jobs:
      - name: Welcome message
        run: echo "my first github action job"
     
-    - name: List files
-      run: cat Readme.md
+     - name: List files
+       run: cat Readme.md 
 
     
