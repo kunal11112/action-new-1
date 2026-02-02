@@ -11,6 +11,6 @@ jobs:
        run: echo "my first github action job"
     
      - name: List files
-       run: cat Readme.md 
+       run: cat README.md 
 
     
