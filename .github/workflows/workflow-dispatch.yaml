@@ -5,7 +5,7 @@ on:
     
 
 jobs:
-  workflow dispatch-job:
+  workflowdispatchjob:
      runs-on: ubuntu-latest
      steps:
      - name: this is scheudle job
