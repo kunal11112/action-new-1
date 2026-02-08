@@ -1,0 +1,25 @@
+name: timeout example
+
+on:
+  workflow_dispatch:
+    
+
+jobs:
+  build:
+     runs-on: ubuntu-latest
+     steps:
+     - name: this is buils job
+       run: echo "this is build job example"
+     
+  deploy:
+     runs-on: ubuntu-latest
+     needs: build
+     concurrency:
+            group: prod deployment
+            cancel-in-progress: true
+     steps:
+     - name: deploy job
+       timeout-minutes: 1
+       run: | 
+           echo "this is deployment job"
+           sleep 600s
