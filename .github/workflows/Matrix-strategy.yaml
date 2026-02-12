@@ -1,4 +1,4 @@
-name: MatrixStrategy
+name: Matrix Strategy
 on:
   push:
      workflow_dispatch:
