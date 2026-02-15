@@ -1,0 +1,17 @@
+name: context testing using if contdition
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: this is bulild job
+      run: echo "this is first job"
+
+  deploy:
+     if: github.ref == 'ref/head/main'
+     needs: build
+     runs-on: ubuntu-latest
+     steps:
+     - name: this is deploy job
+       run: echo "this is deploy job"
